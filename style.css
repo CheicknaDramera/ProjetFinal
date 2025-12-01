@@ -1,0 +1,224 @@
+/* Styliser le body : famille et taille de police */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+/* Styliser le header : couleur d’arrière-plan */
+header {
+    background-color: #f0f0f0;
+}
+
+/* Styliser le nav : couleur d’arrière-plan */
+nav {
+    background-color: #dcdcdc;
+    display: inline-block;
+    width: 80%;
+}
+
+/* Styliser le main : couleur d’arrière-plan + taille de police */
+main {
+    background-color: #ffffff;
+    font-size: 18px;
+}
+.main-nav {
+    background-color: #1e3a8a;   /* Couleur d'arrière-plan attrayante */
+    padding: 12px 20px;          /* Espacement interne */
+    border-radius: 8px;          /* Coins arrondis */
+}
+
+.main-nav ul {
+    list-style: none;            /* Supprime les puces */
+    display: flex;               /* Navigation horizontale */
+    gap: 20px;                   /* Espace entre les liens */
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    color: #fff;                 /* Couleur du texte */
+    text-decoration: none;       /* Enlève le soulignement */
+    font-weight: 600;            /* Texte un peu plus épais */
+    padding: 6px 10px;           /* Améliore le confort visuel */
+    border-radius: 4px;          /* Légers arrondis */
+    transition: background-color 0.3s; /* Animation hover */
+}
+
+.main-nav a:hover {
+    background-color: #3b82f6;   /* Effet visuel au survol */
+}
+
+
+img {
+    border: 3px solid #333;   /* Bordure visible */
+    padding: 8px;             /* Espace entre l’image et la bordure */
+    border-radius: 10px;      /* Coins arrondis */
+    box-sizing: border-box;   /* S'assure que la bordure + padding sont comptés dans la taille */
+}
+
+
+
+/* Styliser le footer : couleur d’arrière-plan */
+footer {
+    background-color: #e0e0e0;
+}
+
+/* Styliser les li : affichage + largeur 
+li {
+    display: inline-block;
+    width: 120px;
+}
+*/
+/* Styliser le h1 : alignement, police, couleur du texte */
+h1 {
+    text-align: center;
+    font-family: "Trebuchet MS", sans-serif;
+    color: #333333;
+}
+
+/* Styliser les p : hauteur de ligne */
+p {
+    line-height: 1.6;
+}
+
+/* 3. Styliser uniquement les images de l'élément nav */
+nav img {
+    width: 10%;           /* largeur d'environ 10% */
+}
+
+/* 4. Modifier la classe grid pour une grille à deux colonnes de 40% chacune */
+.grid {
+    display: grid;
+    grid-template-columns: 40% 40%; /* deux colonnes d'environ 40% chacune */
+    justify-content: center;         /* centrer horizontalement le contenu */
+    align-items: start;              /* aligner le contenu en haut */
+    row-gap: 20px;                   /* espacement vertical entre les lignes */
+}
+
+/* 5. Styliser uniquement les images à l'intérieur de la classe grid */
+.grid img {
+    width: 100%;                     /* images prennent toute la largeur de leur cellule */
+}
+
+/* 6. Ajustements supplémentaires pour la classe grid (selon capture d'écran) */
+/* Tu peux modifier justify-content, align-items, row-gap si nécessaire */
+/* Exemple : 
+.grid {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: space-between;
+    align-items: stretch;
+    row-gap: 15px;
+}
+*/
+
+/* 7. Modifier le style de la classe flex */
+.flex {
+    display: flex;
+    flex-wrap: wrap;          /* permet aux éléments de passer à la ligne si nécessaire */
+    justify-content: space-around; /* ajuster l'espacement horizontal selon capture d'écran */
+    gap: 10px;                /* espacement entre les éléments (optionnel) */
+}
+
+.skip-link {
+    position: absolute;      /* Permet de placer le lien hors de l'écran */
+    top: -40px;              /* Le cache en le décalant au-dessus de la page */
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+
+    transition: top 0.3s;    /* Animation douce lors du focus */
+}
+
+/* Le lien devient visible au focus */
+.skip-link:focus {
+    top: 10px;               /* Réapparaît dans la page */
+}
+ 
+
+nav ul {
+    display: flex;          /* Active Flexbox */
+    justify-content: space-around; /* Espace égal entre les éléments */
+    align-items: center;    /* Aligne verticalement */
+    padding: 0;
+    list-style: none;
+}
+
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  padding: 8px 12px;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
+  /* On prépare la transition pour la couleur, le fond, et une transformation */
+}
+
+nav ul li a:hover {
+  color: #fff;
+  background-color: #007BFF;
+  transform: scale(1.1);
+  /* Au survol : texte blanc, fond bleu, et léger agrandissement */
+}
+
+
+
+.gallery {
+  display: flex;        /* flex parent */
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  transition: transform 0.35s ease, box-shadow 0.25s ease, border-radius 0.35s ease;
+  cursor: pointer;
+}
+
+/* Chaque image a un rayon de bordure différent */
+.gallery img:nth-child(1) {
+  border-radius: 50%;            /* ronde */
+}
+.gallery img:nth-child(2) {
+  border-radius: 20px;           /* arrondi classique */
+}
+.gallery img:nth-child(3) {
+  border-radius: 0 20px 0 20px;  /* coin alterné */
+}
+.gallery img:nth-child(4) {
+  border-radius: 12px 24px 12px 24px;
+}
+
+/* Effets hover ciblés : on peut cibler un nth-child précis */
+.gallery img:nth-child(2):hover {
+  transform: scale(1.08) rotate(-2deg);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+/* Effet hover global pour toutes les images (plus subtil) */
+.gallery img:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+}
+
+/* Sélecteur utile : style alterné (zebra) */
+.gallery img:nth-child(odd) {
+  filter: saturate(1.05);
+}
+.gallery img:nth-child(even) {
+  filter: grayscale(0.15);
+}
